@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Добро пожаловать в наше тестовое приложение"/>
   </div>
 </template>
 
@@ -26,3 +26,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+
