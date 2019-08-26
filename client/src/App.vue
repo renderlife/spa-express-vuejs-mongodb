@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="center">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Добро пожаловать в наше тестовое приложение"/>
   </div>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-#app {
+.center {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

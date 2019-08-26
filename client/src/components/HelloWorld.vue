@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <main>
     <h1>{{ msg }}</h1>
     
     <form @submit.prevent="submit">
@@ -12,35 +12,34 @@
 
     <div>Результат сложения</div>
     <div>Список вычислений из БД</div>
-  </div>
+  </main>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
-  name: 'Посчитать и записать',
   props: {
     msg: String
   },
-  data () {
+  el : 'main',
+  data: function () {
     return {
-       formdata:{ num1: '', num2: '' }
-    }
+      formdata:{ num1: '', num2: '' }
+    };
   },
   methods: {
     submit(){
-      axios.post('/calc', { this.formdata })
+      axios.post('/calc', this.formdata)
       .then(res => {
-        console.log('Все ок!');
-        //console.log(this);
+        console.log('Все ок!')
+        console.log(this);
       })
       .catch(err => { 
-         console.log('Ошибка!');
+        console.log('Ошибка!')
       })
-  },
-  mounted () {},
-  components: {}
+    }
+  }
 }
 </script>
 
